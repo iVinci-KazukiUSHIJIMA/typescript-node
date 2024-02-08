@@ -13,10 +13,10 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div style={{ background: '#333', color: '#eee', padding: '8px' }}>
       <p>this is App.tsx</p>
       <p>{time}</p>
-    </>
+    </div>
   );
 }
 
