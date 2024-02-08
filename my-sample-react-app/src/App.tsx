@@ -1,5 +1,23 @@
+import React from 'react';
+
 function App() {
-  return <p>this is App.tsx</p>;
+  const [time, setTime] = React.useState('');
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date().toLocaleString());
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  return (
+    <>
+      <p>this is App.tsx</p>
+      <p>{time}</p>
+    </>
+  );
 }
 
 export default App;
