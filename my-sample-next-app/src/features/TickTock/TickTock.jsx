@@ -16,10 +16,5 @@ export function TickTock() {
     };
   }, []);
 
-  return (
-    <>
-      <p>this is TickTock.tsx</p>
-      <p>{time}</p>
-    </>
-  );
+  return <p>{time}</p>;
 }
