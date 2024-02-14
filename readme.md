@@ -19,6 +19,7 @@ Next.js はリクエストを受け、サーバーサイドレンダリングを
   - [Next.js ではサーバーサイドレンダリングにより一部描画が行われてレスポンスされる](#nextjs-ではサーバーサイドレンダリングにより一部描画が行われてレスポンスされる)
     - [JavaScript ON の状態 (next)](#javascript-on-の状態-next)
     - [JavaScript OFF の状態 (next)](#javascript-off-の状態-next)
+  - [関連記事](#関連記事)
   - [所感](#所感)
 
 ## 構成
@@ -62,7 +63,8 @@ Next.js においては一部資材がサーバーサイドレンダリングさ
 4. ユーザーがプルダウンメニューで選択した id によるデータフェッチング
 
 これらのうち、`1・3`はサーバーサイドレンダリングにより処理される。つまり、JavaScript OFF でも表示される。  
-`2・4`は client component による処理なので、JavaScript OFF では表示されない。なお、client component の内部であっても、サーバーサイドレンダリングが可能なものはレンダリングされてからレスポンスされる
+`2・4`は client component による処理なので、JavaScript OFF では表示されない。  
+なお、client component の内部であっても、一部はサーバーサイドレンダリングされてからレスポンスされる
 
 ### JavaScript ON の状態 (next)
 
@@ -72,6 +74,11 @@ Next.js においては一部資材がサーバーサイドレンダリングさ
 
 ![21-next-js-off.png](./articles/images/21-next-js-off.png)
 
+## 関連記事
+
+- [Rendering: Composition Patterns | Next.js](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns)
+- [Two Forms of Pre-rendering - Pre-rendering and Data Fetching | Learn Next.js](https://nextjs.org/learn-pages-router/basics/data-fetching/two-forms)
+
 ## 所感
 
-理屈を理解しようと務めることも大事。それと同時に、実際に手を動かして仮説を検証したほうが解像度が高まる
+理屈を理解しようと務めることも大事。であると同時に、実際に手を動かして仮説を検証したほうが解像度が高まる
